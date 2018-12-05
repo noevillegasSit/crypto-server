@@ -1,0 +1,15 @@
+{
+  "name": "expo-crypto",
+  "version": "1.0.0",
+  "description": "Exposición de API para consulta de criptomonedas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nova",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request-promise": "^4.2.2"
+  }
+}
