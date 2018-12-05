@@ -110,6 +110,6 @@ app.get('/api/basic', (req, res) => {
 const PORT = process.env.port||'8080';
 
 
-app.listen(PORT || 3000, function(){
+app.listen(PORT , function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
