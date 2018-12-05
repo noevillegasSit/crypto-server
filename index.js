@@ -1,9 +1,8 @@
 
 const express = require( 'express');
-
+var path    = require("path");
 const rp = require('request-promise');
 const PORT = process.env.PORT || 5000
-
 const requestLatest = {
   method: 'GET',
   uri: 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
@@ -49,6 +48,7 @@ const requestMap = {
 
 // Set up the express app
 const app = express();
+app.use(express.static(path.join(__dirname,"public")));
 
 // Latest all crypto
 app.get('/api/latest', (req, res) => {
@@ -110,7 +110,7 @@ app.get('/api/basic', (req, res) => {
 });
 
 app.get('/', function(req, res){
-  res.redirect('/api/latest');
+  res.sendFile(path.join(__dirname+'public//index.html'));
 });
 
 app.listen(PORT , function(){
