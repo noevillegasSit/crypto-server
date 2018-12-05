@@ -2,6 +2,7 @@
 const express = require( 'express');
 
 const rp = require('request-promise');
+const PORT = process.env.PORT || 5000
 
 const requestLatest = {
   method: 'GET',
@@ -111,8 +112,6 @@ app.get('/api/basic', (req, res) => {
 app.get('/', function(req, res){
   res.redirect('/api/latest');
 });
-
-const PORT = process.env.port|| 3000;
 
 app.listen(PORT , function(){
   console.log("Express server listening on port %d in %s mode", PORT);
