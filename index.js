@@ -112,7 +112,7 @@ app.get('/', function(req, res){
   res.redirect('/api/latest');
 });
 
-const PORT = process.env.port||'8080';
+const PORT = process.env.port|| 3000;
 
 app.listen(PORT , function(){
   console.log("Express server listening on port %d in %s mode", PORT);
