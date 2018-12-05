@@ -115,5 +115,5 @@ app.get('/', function(req, res){
 const PORT = process.env.port||'8080';
 
 app.listen(PORT , function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log("Express server listening on port %d in %s mode", PORT);
 });
