@@ -107,14 +107,12 @@ app.get('/api/basic', (req, res) => {
   });
   
 });
+
 app.get('/', function(req, res){
   res.redirect('/api/latest');
 });
+
 const PORT = process.env.port||'8080';
-
-
-
-log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), router))
 
 app.listen(PORT , function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
