@@ -48,7 +48,6 @@ const requestMap = {
 
 // Set up the express app
 const app = express();
-app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname,"public")));
 
 app.all('*', function(req, res, next) {
